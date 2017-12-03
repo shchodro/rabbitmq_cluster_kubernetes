@@ -1,4 +1,4 @@
-# Project Title
+# RabbitMQ cluster as stateful set in Kubernetes
 
 Here is a stateful set for RabbitMQ cluster deployed to Kubernetes.
 I spent some time searching for working solution, tried to use different Docker images and play with configuration to make it work in cluster as it's required. Here is a ready to go repo with Dockerfile with examples how to add and enable different plugins and set the RabbitMQ broker definitions during start up and Kubernetes ready yaml config which also is compatible with helm.
@@ -85,6 +85,10 @@ I hope you are familiar how to configure secrets storage in your installation an
 
 Now you need build and push an image and then install the stateful set by the same way as in Deployment section.
 
-### Sources
+### Links
 Thanks to
 [Wes Morgans's blog post ](https://wesmorgan.svbtle.com/rabbitmq-cluster-on-kubernetes-with-statefulsets) to implement a way how to configure cluster with `postStart` command set.
+
+### Known issues
+`Helm upgrade` does'n recreate PODs. - In progress
+Working on the best way to update the set.
