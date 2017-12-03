@@ -1,6 +1,6 @@
 FROM rabbitmq:3.6.14-management-alpine
 
-# Install required system packages and dependencies
+# I use additional plugin, but I store it as binary instead of downloading each time, because it's never updated and sometimes unavailable
 ADD extras/rabbitmq_delayed_message_exchange-0.0.1.ez /plugins
 ADD extras/definitions.json /etc/rabbitmq
 ADD extras/rabbitmq.config /etc/rabbitmq
