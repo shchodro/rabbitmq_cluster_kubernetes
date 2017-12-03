@@ -19,7 +19,7 @@ git clone https://github.com/shchodro/rabbitmq_cluster_kubernetes.git
 
 Configure your `kubectl` to communicate with appropriate environment (see Kubernetes documentation).
 
-## Deployment
+### Deployment
 
 Once you have configured Kubernetes cluster and can communicte with it using `kubectl`, you are ready to go.
 
@@ -38,7 +38,7 @@ Log in with username `admin` and password `*Password92!`. This is what we store 
 
 Now run `kubectl delete pod rabbitmq-2` and watch what happens. Node will go red in management UI but then Kubernetes will recreate the same node.
 
-## Production deployment
+### Production deployment
 
 Create a persistence volume in your cluster. Then uncomment the following strings in  `helm-chart/templates/rabbitmq.yaml`:
 
