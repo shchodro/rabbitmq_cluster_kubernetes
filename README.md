@@ -3,10 +3,6 @@
 Here is a stateful set for RabbitMQ cluster deployed to Kubernetes.
 I spent some time searching for working solution, tried to use different Docker images and play with configuration to make it work in cluster as it's required. Here is a ready to go repo with Dockerfile with examples how to add and enable different plugins and set the RabbitMQ broker definitions during start up and Kubernetes ready yaml config which also is compatible with helm.
 
-## Getting Started
-
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
-
 ### Prerequisites
 
 This works with Kubernetes 1.5 and above. Helm 2.2.2 and above.
